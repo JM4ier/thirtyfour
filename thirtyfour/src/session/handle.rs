@@ -19,11 +19,12 @@ use tokio::io::AsyncWriteExt;
 /// to allow sending commands to the underlying WebDriver.
 #[derive(Clone)]
 pub struct SessionHandle {
-    pub(crate) client: fantoccini::Client,
+    /// 
+    pub client: fantoccini::Client,
     /// The session id for this webdriver session.
-    session_id: SessionId,
+    pub session_id: SessionId,
     /// The config used by this instance.
-    config: WebDriverConfig,
+    pub config: WebDriverConfig,
 }
 
 impl Debug for SessionHandle {
